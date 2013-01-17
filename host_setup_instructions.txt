@@ -1,0 +1,9 @@
+# http://www.therailworld.com/posts/36-Wildcard-Subdomains-with-Dnsmasq
+
+sudo apt-get install dnsmasq
+sudo sh -c "echo '\n\n\n#Maps .dev and .test domains to localhost\naddress=/dev/test/127.0.0.1\n\nlisten-address=127.0.0.1\n'  >> /etc/dnsmasq.conf"
+
+# Make sure you have "nameserver 127.0.0.1" on /etc/resolv.conf
+
+# Restart
+sudo /etc/init.d/dnsmasq restart

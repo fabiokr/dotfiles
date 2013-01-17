@@ -1,0 +1,30 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"Base16 Color Schemes",
+		"ChangeQuotes",
+		"CoffeeScript",
+		"Cucumber",
+		"Emmet",
+		"ERB Insert and Toggle Commands",
+		"Git",
+		"GitHubinator",
+		"Meld diff",
+		"MoveTab",
+		"Origami",
+		"Package Control",
+		"Related Files",
+		"RSpec",
+		"Sass",
+		"SchemeCycler",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeREPL",
+		"Theme - Soda",
+		"Tomorrow Color Schemes",
+		"WordHighlight"
+	]
+}

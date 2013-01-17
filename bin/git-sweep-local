@@ -1,0 +1,26 @@
+#!/bin/bash
+# Same as git-sweep, but for local repositories
+
+if [ "$1" == "preview" ]; then
+  git branch --merged master
+elif [ "$1" == "cleanup" ]; then
+  git branch --merged master
+  echo ""
+  echo "Delete this branches? (y/n)"
+  read -p "$1 " yn
+
+  if [ "$yn" = "y" ]; then
+    git branch --merged master | grep -v 'master$' | xargs git branch -d
+  fi
+else
+  echo "usage: git-sweep-local <action>"
+  echo ""
+  echo "Like git-sweep, but for your local branches"
+  echo ""
+  echo "action:"
+  echo "  Preview changes or perform clean up"
+  echo ""
+  echo "  {preview,cleanup}"
+  echo "    preview          Preview the branches that will be deleted"
+  echo "    cleanup          Delete merged branches from the remote"
+fi

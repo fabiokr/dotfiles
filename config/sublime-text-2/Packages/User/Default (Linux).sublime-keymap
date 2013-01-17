@@ -1,0 +1,18 @@
+[
+  { "keys": ["ctrl+k", "ctrl+s"], "command": "toggle_side_bar" },
+
+  // Disable arrows for vintage command mode
+  { "keys": ["right"], "command": "null", "context": [{ "key": "setting.command_mode", "operand": true }]},
+  { "keys": ["left"],  "command": "null", "context": [{ "key": "setting.command_mode", "operand": true }]},
+  { "keys": ["up"],    "command": "null", "context": [{ "key": "setting.command_mode", "operand": true }]},
+  { "keys": ["down"],  "command": "null", "context": [{ "key": "setting.command_mode", "operand": true }]},
+
+  // Plugins keymaps
+  { "keys": ["ctrl+shift+'"], "command": "change_quotes" },
+
+  // ERB toggler
+  { "keys": ["ctrl+shift+."], "command": "erb" },
+
+  // Advanced new file
+  { "keys": ["ctrl+alt+n"], "command": "advanced_new_file"}
+]
