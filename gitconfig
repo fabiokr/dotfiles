@@ -28,6 +28,9 @@
   rbs = rebase --skip
   undo = reset --soft HEAD^
 
+  # squash the last n commits
+  squash = "!f() { git reset --soft HEAD~$1 && git commit; }; f"
+
 [format]
   pretty = format:%C(yellow)%h%Creset -%Cred%d%Creset %s %C(green)(%ad)%Creset %C(bold blue)<%an>%Creset
 
