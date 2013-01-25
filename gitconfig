@@ -1,28 +1,28 @@
 [user]
-	name = Fabio Kreusch
-	email = fabiokr@gmail.com
+  name = Fabio Kreusch
+  email = fabiokr@gmail.com
 
 [github]
-	user = fabiokr
+  user = fabiokr
 
 [core]
   excludesfile = /home/fabio/.gitignore
-	editor = vim
+  editor = vim
 
 [push]
-	default = upstream
+  default = upstream
 
 [alias]
-	aa = add --all
-	br = branch
-	st = status -bu
-	co = commit -m
+  aa = add --all
+  br = branch
+  st = status -bu
+  co = commit -m
   coa = commit --amend
-	ch = checkout
+  ch = checkout
   hist = pretty-log
-	h = !git hist -10
-	di = diff
-	dc = diff --cached
+  h = !git hist -10
+  di = diff
+  dc = diff --cached
   rb = rebase
   rbc = rebase --continue
   rbs = rebase --skip
@@ -35,7 +35,7 @@
   pretty = format:%C(yellow)%h%Creset -%Cred%d%Creset %s %C(green)(%ad)%Creset %C(bold blue)<%an>%Creset
 
 [color]
-	ui = auto
+  ui = auto
 
 [color "status"]
   header    = yellow
@@ -52,14 +52,14 @@
   whitespace = red reverse
 
 [branch]
-	autosetupmerge = true
+  autosetupmerge = true
 
 [diff]
   renameLimit = 10000
   rename = true
 [giggle]
-	main-window-maximized = true
-	main-window-geometry = 700x550+250+136
-	history-view-vpane-position = 601
-	main-window-view = HistoryView
-	file-view-vpane-position = 799
+  main-window-maximized = true
+  main-window-geometry = 700x550+250+136
+  history-view-vpane-position = 601
+  main-window-view = HistoryView
+  file-view-vpane-position = 799
