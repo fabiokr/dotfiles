@@ -18,6 +18,7 @@
   st = status -bu
   co = commit -m
   coa = commit --amend
+  fix = commit --fixup HEAD -m
   ch = checkout
   hist = pretty-log
   h = !git hist -10
@@ -27,9 +28,7 @@
   rbc = rebase --continue
   rbs = rebase --skip
   undo = reset --soft HEAD^
-
-  # squash the last n commits
-  squash = "!f() { git reset --soft HEAD~$1 && git commit; }; f"
+  squash = rebase -i
 
 [format]
   pretty = format:%C(yellow)%h%Creset -%Cred%d%Creset %s %C(green)(%ad)%Creset %C(bold blue)<%an>%Creset
@@ -57,9 +56,21 @@
 [diff]
   renameLimit = 10000
   rename = true
+
 [giggle]
   main-window-maximized = true
   main-window-geometry = 700x550+250+136
   history-view-vpane-position = 601
   main-window-view = HistoryView
   file-view-vpane-position = 799
+
+[merge "gemfilelock"]
+  name = updates Gemfile.lock
+  driver = echo "Gemfile.lock merge conflict, running bundle install" && bundle install --quiet
+
+[init]
+  # Copies git attribute templates on init/clone
+  templatedir = ~/.git_templates
+
+[rebase]
+  autosquash = true
