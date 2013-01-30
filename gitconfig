@@ -18,7 +18,7 @@
   st = status -bu
   co = commit -m
   coa = commit --amend
-  fix = commit --fixup HEAD -m
+  fix = commit --squash HEAD -m
   ch = checkout
   hist = pretty-log
   h = !git hist -10
