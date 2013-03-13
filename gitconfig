@@ -30,7 +30,7 @@
   undo = reset --soft HEAD^
 
   # squash the last n commits
-  squash = "!f() { git reset --soft $1 && git commit -m $2; }; f"
+  squash = "!f() { git reset --soft $1 && git commit; }; f"
 
 [format]
   pretty = format:%C(yellow)%h%Creset -%Cred%d%Creset %s %C(green)(%ad)%Creset %C(bold blue)<%an>%Creset
